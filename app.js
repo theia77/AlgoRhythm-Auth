@@ -100,7 +100,9 @@ document.querySelectorAll('.githubLogin').forEach(btn => {
       ctx.fillText(randChar(), i * w / cols + w/(cols*2), drops[i] * fontSize);
 
       // much slower fall speed
-      drops[i] += Math.random() * 0.2 + 0.1;
+     // much slower: about 0.2 to 0.5 per frame
+drops[i] += Math.random() * 0.3 + 0.2;
+
 
       if (drops[i] * fontSize > h - eqBars[i] - 20) {
         drops[i] = Math.random() * -10;
